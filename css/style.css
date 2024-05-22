@@ -234,6 +234,13 @@ section {
     background-color: var(--main-red-3)
 }
 
+.form-max-width{
+    width: clamp(300px, 75%, 600px);
+}
+
+.container-min-width {
+    min-width: 375px;
+}
 input:hover,
 input:active,
 textarea:hover {
@@ -257,7 +264,7 @@ textarea:hover {
     gap: 1rem;
     font-size: 1rem;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 .grow {
