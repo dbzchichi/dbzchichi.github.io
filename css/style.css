@@ -238,11 +238,11 @@ section {
 }
 
 .form-max-width{
-    width: clamp(300px, 75%, 600px);
+    width: clamp(275px, 75%, 600px);
 }
 
 .container-min-width {
-    min-width: 375px;
+    min-width: 350px;
 }
 input:hover,
 input:active,
