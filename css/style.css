@@ -227,6 +227,33 @@ section {
 }
 
 
+.gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  .gallery-cell.is-selected {
+    background: #ED2;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: "asdf";
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+
 .form-button {
     background-color: var(--main-red-2);
     color: white;
@@ -238,11 +265,11 @@ section {
 }
 
 .form-max-width{
-    width: clamp(275px, 75%, 600px);
+    width: clamp(250px, 75%, 600px);
 }
 
 .container-min-width {
-    min-width: 350px;
+    min-width: 325px;
 }
 input:hover,
 input:active,
