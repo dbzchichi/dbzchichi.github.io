@@ -266,7 +266,9 @@ section {
 .card-fb-globe {
     font-weight: 200;
 }  
-
+.card-google-star {
+    color: gold;
+}
 .card-fb-review {
     padding: 0px 30px 0px 0px;
     line-height: 1.5;
