@@ -2,7 +2,6 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: 1,
-    centeredSlides: true,
     breakpoints: {
         800: {
             slidesPerView: 2,
