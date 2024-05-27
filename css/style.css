@@ -41,7 +41,7 @@ svg {
 input,
 button,
 textarea,
-select {
+select { 
     font: inherit;
 }
 
@@ -71,6 +71,8 @@ h6 {
     --main-red-2: #c81011;
     --main-red-3: #eb0a2b;
     --main-black-1: #212021;
+    --fb-color-black-text: #050505;
+    --fb-color-secondary-text: #65676b;
 }
 
 html {
@@ -219,40 +221,78 @@ section {
 }
 
 
+.card-img {
+    display: inline-block;
+    width: 16px;
+}
+.card-fb-name {
+    /* font-size: .83rem; */
+    color: var(--fb-color-black-text);
+}
 
+.card-fb-recommends {
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
 
+}
 
+.card-fb-recommends-text {
+    color: var(--fb-color-secondary-text);
+    /* font-size: .83rem; */
+    font-weight: 400;
+}
+
+.card-fb-business {
+    color: var(--fb-color-black-text);
+    /* font-size: .83rem; */
+}
+
+.card-fb-via {
+    /* font-size: .83rem; */
+    font-weight: 400;
+}
+
+.card-fb-globe {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    top: -1px;
+    left: 2px;
+}
+.card-fb-globe {
+    font-weight: 200;
+}  
+
+.card-fb-review {
+    padding: 0px 30px 0px 0px;
+    line-height: 1.5;
+    font-weight: 400;
+}
 .last-time {
     margin-bottom: 2rem;
 }
 
 
-.gallery {
-    background: #EEE;
-  }
-  
-  .gallery-cell {
-    width: 28%;
-    height: 200px;
-    margin-right: 10px;
-    background: #8C8;
-    counter-increment: gallery-cell;
-  }
-  
-  .gallery-cell.is-selected {
-    background: #ED2;
-  }
-  
-  /* cell number */
-  .gallery-cell:before {
-    display: block;
-    text-align: center;
-    content: "asdf";
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
+.swiper {
+    width: 100%;
+    padding: 0px 25px;
+    height: 500px;
   }
 
+  .swiper-wrapper {
+    gap: 15px;
+  }
+  .swiper-slide {
+    flex: 1 0 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+  }
 
 .form-button {
     background-color: var(--main-red-2);
