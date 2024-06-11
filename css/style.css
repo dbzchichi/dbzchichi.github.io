@@ -158,11 +158,37 @@ h3 {
     }
 }
 
+.breadcrumb-item-inactive > a {
+    text-decoration: none;
+    color: var(--main-black-1);
+    transition: all 250ms;
+}
+
+.breadcrumb-item.active  {
+    color: var(--main-black-1);
+    transition: all 250ms;
+}
+
+.breadcrumb-item > a:hover {
+    color: var(--main-red);
+    font-weight: 600;
+    /* text-decoration: underline; */
+}
+
+
+.breadcrumb-item.active:hover{
+    color: var(--main-red);
+    font-weight: 600;
+
+}
+
+
 header {
     border-bottom: 1px dotted hsl(0deg 0% 0% / 0.2);
 }
 
 section {
+    margin-bottom: 1rem;
     margin-bottom: 5rem;
 }
 
@@ -282,7 +308,7 @@ section {
 .swiper {
     width: 90%;
     padding: 0px 25px;
-    height: 550px;
+    height: 600px;
   }
 
   .swiper-wrapper {
@@ -351,6 +377,84 @@ textarea:hover {
     flex-direction: column;
     gap: 10px;
     align-items: baseline;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.names {
+    font-family: "Roboto Serif", serif
+}
+.names-belt {
+    color: var(--fb-color-secondary-text);
+}
+.bio-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.bio-box-img {
+    flex: 1 0 25px;
+}
+.bio-box-bio {
+    flex: 3 0 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .bio-box {
+        flex-wrap: wrap;
+    }
+    .bio-box-img {
+        flex: 0 0 100%;
+    }
+    .bio-box-bio {
+        flex: 0 0 100%;
+    }
+}
+
+.bio-box-img {
+    width: 100%;
+}
+.bio-p {
+    font-weight: 400;
+}
+
+.bio-ul{
+    font-weight: 400;
+}
+.facilities-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.facilities-img {
+    flex: 1 0 50%;
+}
+.facilities-blurb {
+    flex: 1 0 50%;
+}
+
+.bio-large {
+    display: block;
+}
+.bio-small {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .facilities-box {
+        flex-wrap: wrap;
+    }
+    .facilities-img {
+        flex: 0 0 100%;
+    }
+    .bio-large {
+        display: none;
+    }
+    .bio-small{
+        display: block;
+    }
 }
 
 /* body { */
