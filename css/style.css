@@ -238,6 +238,99 @@ section {
     overflow: hidden;
 }
 
+
+#programs {
+    height: 1000px;
+
+
+}
+.animated-gif {
+    background:  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("../images/adults.gif");
+    background-size: cover; 
+    height: 800px;
+    display: grid;
+    grid-template-columns: [leftpadding] 10% [card1col] 450px [centerpadding] auto [card2col] 450px [rightpadding] 10%  ;
+    grid-template-rows: [toppadding] auto [card1row] 250px [centerpadding] 50px [card2row] 250px [bottompadding] 30px;
+    transition: all .3s;
+
+}
+
+.program-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.program-empty {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.program-card {
+    background-color: transparent;
+    color: white;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-right: 70px;
+    border-top: white solid 1px;;
+
+
+}
+
+
+
+.program-card:hover{
+    transition: all .15s;
+    background-color:white;
+    color: #222222;
+    transform: translate(4px, -4px);
+    box-shadow: -2px 2px 10px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px 2px 10px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 2px 10px 1px rgba(0,0,0,0.75);
+    
+}
+
+.program-card-learnmore {
+    display: none;
+    text-decoration: underline;
+    color: #222222;
+}
+
+.program-card-learnmore:hover {
+    color: var(--main-red);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline;
+}
+.program-card-h3 {
+    padding-bottom: 2rem;
+}
+
+.learn-more {
+    display: none;
+}
+.program-card-1 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.program-card-2 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.program-card-3 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.program-card-4 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+
+
 .h2-schedule {
     font-size: calc(1.325rem + 1.1vw);
     margin-bottom: 2rem;
@@ -481,6 +574,28 @@ textarea:hover {
         display: block;
     }
 }
+
+.center-text {
+    text-align: center;
+}
+.center-image {
+    margin: 0px auto;
+}
+
+.program-text {
+    max-width: 700px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .program-text{
+        max-width: 500px;
+        padding: 20px;
+    }
+
+}
+
+
 
 /* body { */
 /* height: 100%;
