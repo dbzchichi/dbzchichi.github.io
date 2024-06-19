@@ -178,11 +178,11 @@ h3 {
 }
 
 
-.breadcrumb-item.active:hover {
-    /* color: var(--main-red); */
-    /* font-weight: 600; */
+/* .breadcrumb-item.active:hover { */
+/* color: var(--main-red); */
+/* font-weight: 600; */
 
-}
+/* } */
 
 
 header {
@@ -241,21 +241,64 @@ section {
 
 #programs {
     height: 1000px;
-
-
 }
+
+
 .animated-gif {
-    background:  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("../images/adults.gif");
-    background-size: cover; 
-    height: 800px;
+    position: static;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("../images/adults.gif");
+    background-size: cover;
+    height: 900px;
     display: grid;
-    grid-template-columns: [leftpadding] 10% [card1col] 450px [centerpadding] auto [card2col] 450px [rightpadding] 10%  ;
+    grid-template-columns: [leftpadding] 10% [card1col] 450px [centerpadding] auto [card2col] 450px [rightpadding] 10%;
     grid-template-rows: [toppadding] auto [card1row] 250px [centerpadding] 50px [card2row] 250px [bottompadding] 30px;
     transition: all .3s;
+    background-position: initial;
+}
+
+
+@media screen and (max-width: 768px) {
+    .animated-gif {
+        background-position-x: 60% !important;
+        grid-template-columns: [card1col] 1fr;
+        grid-template-rows: [toppadding] 0px [card1row] 1fr  [card2row] 1fr [card3row] 1fr [card4row] 1fr [bottompadding] 0px;
+    
+    }
 
 }
 
-.program-row {
+/* .animated-gif {
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("../images/adults.gif");
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    /* display: grid;
+    grid-template-columns: [leftpadding] 10% [card1col] 450px [centerpadding] auto [card2col] 450px [rightpadding] 10%  ;
+    grid-template-rows: [toppadding] auto [card1row] 250px [centerpadding] 50px [card2row] 250px [bottompadding] 30px; */
+/* transition: all .3s;
+
+} */
+*/
+/* 
+.swiper-test {
+    width: 100%;
+    /* height: 100%; */
+/* height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+
+/* .swiper-slide-test {
+    background: transparent;
+    /* height: calc((100% - 30px) / 2) !important; */
+/* height: 200px; */
+/* Center slide text vertically */
+/* display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+*/ .program-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -272,22 +315,22 @@ section {
     padding-left: 20px;
     padding-top: 30px;
     padding-right: 70px;
-    border-top: white solid 1px;;
-
+    border-top: white solid 1px;
+    /* width: 400px !important; */
 
 }
 
 
 
-.program-card:hover{
+.program-card:hover {
     transition: all .15s;
-    background-color:white;
+    background-color: white;
     color: #222222;
-    transform: translate(4px, -4px);
-    box-shadow: -2px 2px 10px 1px rgba(0,0,0,0.75);
--webkit-box-shadow: -2px 2px 10px 1px rgba(0,0,0,0.75);
--moz-box-shadow: -2px 2px 10px 1px rgba(0,0,0,0.75);
-    
+    transform: translate(2px, 7px);
+    box-shadow: -2px 2px 10px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 2px 10px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 2px 10px 1px rgba(0, 0, 0, 0.75);
+
 }
 
 .program-card-learnmore {
@@ -302,6 +345,7 @@ section {
     text-decoration: none;
     display: inline;
 }
+
 .program-card-h3 {
     padding-bottom: 2rem;
 }
@@ -309,6 +353,7 @@ section {
 .learn-more {
     display: none;
 }
+
 .program-card-1 {
     grid-column-start: 2;
     grid-row-start: 2;
@@ -329,7 +374,25 @@ section {
     grid-row-start: 4;
 }
 
+@media screen and (max-width: 768px) {
+    .program-card-1 {
+        grid-column-start: 1;
+        grid-row-start: 2
+    }
+    .program-card-2 {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+    .program-card-3 {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    .program-card-4 {
+        grid-column-start: 1;
+        grid-row-start: 5;
+    }
 
+}
 
 .h2-schedule {
     font-size: calc(1.325rem + 1.1vw);
@@ -404,18 +467,39 @@ section {
     margin-bottom: 2rem;
 }
 
-
+/* 
 .swiper {
+
+} */
+
+.swiper-reviews {
     width: 90%;
     padding: 0px 25px;
     height: 600px;
 }
 
+/* 
 .swiper-wrapper {
+    gap: 15px;
+} */
+
+.swiper-wrapper-reviews {
     gap: 15px;
 }
 
-.swiper-slide {
+.swiper-wrapper-programs {
+    position: relative;
+}
+
+/* .swiper-slide {
+    flex: 1 0 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+} */
+
+.swiper-slide-reviews {
     flex: 1 0 1;
     display: flex;
     flex-direction: column;
@@ -578,6 +662,7 @@ textarea:hover {
 .center-text {
     text-align: center;
 }
+
 .center-image {
     margin: 0px auto;
 }
@@ -588,7 +673,7 @@ textarea:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .program-text{
+    .program-text {
         max-width: 500px;
         padding: 20px;
     }
@@ -596,6 +681,24 @@ textarea:hover {
 }
 
 
+.swiper-programs-container {
+    min-width: 100%;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide-programs {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    height: 100px;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* body { */
 /* height: 100%;
