@@ -250,7 +250,7 @@ section {
     background-size: cover;
     height: 1050px;
     display: grid;
-    grid-template-columns: [leftpadding] 10% [card1col] 450px [centerpadding] auto [card2col] 450px [rightpadding] 10%;
+    grid-template-columns: [leftpadding] 10% [card1col] 425px [centerpadding] auto [card2col] 425px [rightpadding] 10%;
     grid-template-rows: [toppadding] auto [card1row] 250px [centerpadding] 50px [card2row] 250px [bottompadding] 30px;
     transition: all .3s;
     background-position: initial;
